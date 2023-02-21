@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import Header from './Header';
+import Loading from './Loading';
 
-function App() {
+export default function App() {
+  const [Name, setName] = React.useState("Home")
+  const [Comp, setComp] = React.useState(React.lazy(() => import("./Home")))
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      // justifyContent: 'center',
+      height: '100vh',
+      width: '100vw',
+      backgroundColor: "#ffe9ec",
+    }}>
+      <Header Name={Name} setName={setName} setComp={setComp}/>
+      <Suspense fallback={<Loading />}>
+        <Comp/>
+      </Suspense>
     </div>
-  );
+  )
 }
-
-export default App;

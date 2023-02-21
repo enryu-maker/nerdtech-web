@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: local('Poppins'), url(./Fonts/Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: local('Poppins'), url(./Fonts/Poppins-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mono';
+  src: local('Poppins'), url(./Fonts/PTMono-Regular.ttf) format('truetype');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
