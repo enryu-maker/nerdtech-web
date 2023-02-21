@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknerdtech=self.webpackChunknerdtech||[]).push([[779],{779:function(e,t,n){n.r(t),n.d(t,{default:function(){return h}});var c=n(63),r=(n(791),n(562)),i=n(184);function h(){return(0,i.jsx)("div",{style:(0,c.Z)({display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",height:"100vh",width:"100vw",color:r.DM.Primary},r.g5.h1),children:"Contact.nerdtech@gmail.com"})}}}]);
+//# sourceMappingURL=779.00d431c3.chunk.js.map
