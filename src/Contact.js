@@ -9,7 +9,9 @@ export default function Contact() {
   const [Name, setName] = React.useState('');
   const [Phone, setPhone] = React.useState('');
   const [Email, setEmail] = React.useState('');
+  const [msg, setMsg] = React.useState('');
   const [loading, setLoading] = React.useState(false);
+  const [Sucess, setSucess] = React.useState(false);
   async function sendEmail() {
     setLoading(true)
     const data = {
@@ -18,24 +20,31 @@ export default function Contact() {
       "email": Email,
       "message": Message
     }
-    await axios.post("https://k3z9pg3dyf.execute-api.us-east-1.amazonaws.com/Nerdtech-Contact-Endpoint", data,{
+    await fetch("https://k3z9pg3dyf.execute-api.us-east-1.amazonaws.com/Nerdtech-Contact-Endpoint", {
+      method: "POST",
+      mode: "no-cors",
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-      }
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)
     })
-      .then((res) => {
+      .then((data) => {
+        setSucess(true)
+        setMsg("Thanks, We will contact you soon");
         setLoading(false)
-        alert("Message Sent")
+        setEmail("")
+        setName("")
+        setPhone("")
+        setMessage("")
       }
       )
       .catch((err) => {
-        console.log(err)
+        setSucess(false)
+        setMsg("Something went wrong");
         setLoading(false)
-        alert("Error Occured")
       }
-      )
+      );
+
   }
 
   return (
@@ -78,7 +87,20 @@ export default function Contact() {
           fontWeight: 'bold',
           fontFamily: "Mono",
           letterSpacing: "2px",
+          marginBlockEnd: 0,
         }}>Contact Now</p>
+        <p style={{
+          color: Sucess? COLORS.green:COLORS.red,
+          textAlign: 'center',
+          fontSize: "16px",
+          fontWeight: 'bold',
+          fontFamily: "Mono",
+          letterSpacing: "2px",
+          marginBlock: 0,
+          width: 400,
+        }}>
+          {msg}
+        </p>
         <p style={{
           color: COLORS.black,
           textAlign: 'left',
@@ -173,6 +195,9 @@ export default function Contact() {
             ...FONTS.body3,
             paddingLeft: 20
 
+          }}
+          onChange={(e) => {
+            setMessage(e.target.value)
           }}
           placeholder="Your Message"
           type="text" name="Message" />
