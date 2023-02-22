@@ -21,12 +21,7 @@ export const COLORS={
     // E6E2DD
     yellow:'#ffdf00'
 }
-// 8c9de3
-// 6586c8
-// 7e93c4
-// 446eda
-// 5077d3
-// 6485e8
+
 export const SIZES = {
     // global sizes
     base: 8,
@@ -49,9 +44,9 @@ export const SIZES = {
 
 
 };
-const type = { base:"Poppins-Regular", 
-bold: "Poppins-Medium", 
-emphasis:"Poppins-Regular"}
+const type = { base:"Mono", 
+bold: "Mono", 
+emphasis:"Mono"}
 export const FONTS = {
     largeTitle: { fontFamily: type.bold, fontSize: SIZES.largeTitle },
     h1: { fontFamily: type.bold, fontSize: SIZES.h1,},

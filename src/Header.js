@@ -55,7 +55,7 @@ export default function Header({
                         setComp(React.lazy(() => import("./Products")))
                         setName("Products")
                     }}
-                >Products</button>
+                >Clients</button>
                 <button style={{
                     color: Name === "Reviews" ? COLORS.Primary : COLORS.black,
                     ...FONTS.h2,
@@ -88,6 +88,7 @@ export default function Header({
                     letterSpacing: "2px",
                     backgroundColor: COLORS.white,
                     border: "none",
+
                 }}
                     onClick={() => {
                         setComp(React.lazy(() => import("./Home")))
@@ -95,51 +96,63 @@ export default function Header({
                     }}
                 >NerdTech</button>
             </div>
-            {
-                Name != "Home" ? <div style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    paddingInlineStart: "45px",
-                    marginRight: "251px",
+            <div style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
 
-                }}>
-                    <button style={{
-                        color: Name === "Contact" ? COLORS.Primary : COLORS.black,
-                        fontSize: "22px",
-                        fontWeight: 'bold',
-                        fontFamily: "Mono",
-                        letterSpacing: "2px",
-                        backgroundColor: COLORS.white,
-                        border: "none",
+            }}>
+                <button style={{
+                    color: Name === "Blog" ? COLORS.Primary : COLORS.black,
+                    fontSize: "22px",
+                    fontWeight: 'bold',
+                    fontFamily: "Mono",
+                    letterSpacing: "2px",
+                    backgroundColor: COLORS.white,
+                    border: "none",
+                    marginLeft: "20px",
+
+                }}
+                    onClick={() => {
+                        setComp(React.lazy(() => import("./Blogs")))
+                        setName("Blog")
                     }}
-                        onClick={() => {
-                            setComp(React.lazy(() => import("./Contact")))
-                            setName("Contact")
-                        }}
-                    >Contact Us</button>
-                </div>
-                    :
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingInlineStart: "50px",
-                    }}>
-                        <p style={{
-                            color: COLORS.Primary,
-                            fontSize: "22px",
-                            fontWeight: 'bold',
-                            fontFamily: "Mono",
-                            letterSpacing: "2px",
-                            border: "none",
-                        }}
-                            href="mailto:contact.nerdtech@gmail.com"
-                        >Your Partner For Innovation</p>
-                    </div>
-            }
+                >Blogs</button>
+                <button style={{
+                    color: Name === "About" ? COLORS.Primary : COLORS.black,
+                    fontSize: "22px",
+                    fontWeight: 'bold',
+                    fontFamily: "Mono",
+                    letterSpacing: "2px",
+                    backgroundColor: COLORS.white,
+                    border: "none",
+                    marginLeft: "20px",
+
+                }}
+                    onClick={() => {
+                        setComp(React.lazy(() => import("./About")))
+                        setName("About")
+                    }}
+                >About Us</button>
+                <button style={{
+                    color: Name === "Contact" ? COLORS.Primary : COLORS.black,
+                    fontSize: "22px",
+                    fontWeight: 'bold',
+                    fontFamily: "Mono",
+                    letterSpacing: "2px",
+                    backgroundColor: COLORS.white,
+                    border: "none",
+                    marginLeft: "20px",
+
+                }}
+                    onClick={() => {
+                        setComp(React.lazy(() => import("./Contact")))
+                        setName("Contact")
+                    }}
+                >Contact Us</button>
+            </div>
+
 
         </div>
     )

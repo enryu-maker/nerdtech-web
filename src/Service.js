@@ -1,5 +1,6 @@
 import React from 'react'
 import ServiceCard from './Component/ServiceCard'
+import Footer from './Footer'
 import { COLORS } from './Theme/Theme'
 
 export default function Service() {
@@ -52,8 +53,10 @@ export default function Service() {
         // justifyContent: 'center',
         height: '100vh',
         width: '100vw',
-        backgroundColor:"#ffe9ec",
+        backgroundColor:COLORS.layout,
         overflowY:"scroll",
+      paddingBottom: "80px",
+
     }}>
         {
             data.map((item,index) => {
@@ -61,6 +64,7 @@ export default function Service() {
             }
             )
         }
+      <Footer/>
     </div>
   )
 }
