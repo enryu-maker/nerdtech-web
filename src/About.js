@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import { COLORS } from './Theme/Theme'
+import { Helmet } from "react-helmet";
 export default function About() {
     return (
         <div
@@ -15,6 +16,11 @@ export default function About() {
                 paddingBottom: "80px",
             }}
         >
+            <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>NerdTech :: AboutUs</title>
+                    <description>In website development service we offers customized website design, development, and maintenance, catering to clients' specific needs, goals, and budget. We aims to create a professional, user-friendly, and high-performing online presence.</description>
+                </Helmet>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -218,7 +224,7 @@ export default function About() {
                         fontFamily: "Mono",
                         letterSpacing: "2px",
                         marginBlock: 0,
-                    }}>Backend Developer</p>
+                    }}>BackEnd Developer</p>
                 </div>
             </div>
             <div style={{

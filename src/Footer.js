@@ -34,7 +34,21 @@ export default function Footer({
           // marginBlockEnd: 0,
           color: COLORS.black
         }}>
-          Copyright Nerdtech 2023, All rights reserved
+          Copyright Nerdtech 2023, All rights reserved.
+        </p>
+        <p style={{
+          ...FONTS.h3,
+          fontWeight: "bolder",
+          color: COLORS.Primary
+        }}>
+          <img 
+          src={require("./assets/Logo.png")}
+          style={{
+            width: 30,
+            marginRight: 10,
+          }}
+          />
+          Your Partner For Innovation.
         </p>
       </div>
     </div >

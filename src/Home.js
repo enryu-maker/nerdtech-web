@@ -1,7 +1,7 @@
 import React from 'react'
-import image from './assets/Background.png'
 import { COLORS } from './Theme/Theme'
 import Footer from './Footer'
+import {Helmet} from "react-helmet";
 export default function Home() {
     return (
         <>
@@ -19,6 +19,11 @@ export default function Home() {
 
                 }}
             >
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>NerdTech :: Home</title>
+                    <description>In website development service we offers customized website design, development, and maintenance, catering to clients' specific needs, goals, and budget. We aims to create a professional, user-friendly, and high-performing online presence.</description>
+                </Helmet>
                 <p style={{
                     // marginTop: "78px",
                     color: COLORS.black,
@@ -57,7 +62,7 @@ export default function Home() {
                     }}
                 />
 
-                <Footer/>
+                <Footer />
             </div>
         </>
     )

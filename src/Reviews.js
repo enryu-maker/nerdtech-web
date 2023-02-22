@@ -2,7 +2,7 @@ import React from 'react'
 import ReviewCard from './Component/ReviewCard'
 import Footer from './Footer'
 import { COLORS, FONTS } from './Theme/Theme'
-
+import { Helmet } from 'react-helmet'
 export default function Reviews() {
   return (
     <div style={{
@@ -17,6 +17,11 @@ export default function Reviews() {
       paddingBottom: "80px",
 
     }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>NerdTech :: Reviews</title>
+        <description>In website development service we offers customized website design, development, and maintenance, catering to clients' specific needs, goals, and budget. We aims to create a professional, user-friendly, and high-performing online presence.</description>
+      </Helmet>
       <p style={{
         color: COLORS.Primary,
         textAlign: 'center',
