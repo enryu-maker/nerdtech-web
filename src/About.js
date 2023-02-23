@@ -433,17 +433,60 @@ export default function About() {
       </p>
       <div
         style={{
-          display: mobile ? "flex" : "flex",
+          display: mobile ? "flex" : "contents",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-evenly",
-          width: mobile ? "100%" : "70%",
+          justifyContent: mobile ? "space-evenly" : "center",
+          width: mobile ? "100%" : "50%",
           //   flexWrap: mobile ? "wrap" : null,
         }}
       >
+        {mobile ? (
+          <>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8625228787237!2d73.72477151491609!3d19.972283028376985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdded4582aea6f1%3A0x11619722b3c8ffee!2sNerdtech%20%7C%20Web%20Development%20and%20Mobile%20Applications%20Development%20Agency!5e0!3m2!1sen!2sin!4v1677089458014!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
+          </>
+        ) : (
+          <>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8625228787237!2d73.72477151491609!3d19.972283028376985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdded4582aea6f1%3A0x11619722b3c8ffee!2sNerdtech%20%7C%20Web%20Development%20and%20Mobile%20Applications%20Development%20Agency!5e0!3m2!1sen!2sin!4v1677089458014!5m2!1sen!2sin"
+              width="400"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
+              width="400"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
+          </>
+        )}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8625228787237!2d73.72477151491609!3d19.972283028376985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdded4582aea6f1%3A0x11619722b3c8ffee!2sNerdtech%20%7C%20Web%20Development%20and%20Mobile%20Applications%20Development%20Agency!5e0!3m2!1sen!2sin!4v1677089458014!5m2!1sen!2sin"
-          width="600"
+          width="400"
           height="450"
           style={{ border: 0 }}
           allowFullScreen=""
@@ -452,7 +495,7 @@ export default function About() {
         />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
-          width="600"
+          width="400"
           height="450"
           style={{ border: 0 }}
           allowFullScreen=""
@@ -462,7 +505,7 @@ export default function About() {
       </div>
       <div
         style={{
-          display: mobile ? "flex" : "flex",
+          display: mobile ? "flex" : "contents",
           flexDirection: mobile ? "row" : "column",
           alignItems: "center",
           justifyContent: "space-evenly",
@@ -485,7 +528,7 @@ export default function About() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            width: 500,
+            width: mobile ? 500 : 400,
           }}
         >
           <p
@@ -497,7 +540,7 @@ export default function About() {
               fontFamily: "Mono",
               letterSpacing: "2px",
               marginBlock: 0,
-              width: 500,
+              width: mobile ? 500 : 400,
             }}
           >
             Contact Now
@@ -506,12 +549,12 @@ export default function About() {
             style={{
               color: COLORS.black,
               textAlign: "Left",
-              fontSize: "20px",
+              fontSize: mobile ? "20px" : 15,
               fontWeight: "bold",
               fontFamily: "Mono",
               letterSpacing: "2px",
               marginBlock: 0,
-              width: 500,
+              width: mobile ? 500 : 400,
             }}
           >
             Email:
@@ -530,12 +573,12 @@ export default function About() {
             style={{
               color: COLORS.black,
               textAlign: "Left",
-              fontSize: "20px",
+              fontSize: mobile ? "20px" : 15,
               fontWeight: "bold",
               fontFamily: "Mono",
               letterSpacing: "2px",
               marginBlock: 0,
-              width: 500,
+              width: mobile ? 500 : 400,
             }}
           >
             Phone: +91 9405649047 / +91 9518556670
