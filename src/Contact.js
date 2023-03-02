@@ -50,7 +50,7 @@ export default function Contact() {
         setLoading(false);
       });
   }
-  console.log(mobile ? (tablet ? "tab" : "desktop") : "mobile");
+  // console.log(mobile ? (tablet ? "tab" : "desktop") : "mobile");
 
   return (
     <>
@@ -72,6 +72,7 @@ export default function Contact() {
           width: "100vw",
           backgroundColor: COLORS.layout,
           paddingBottom: "200px",
+          marginTop: mobile ? null : 20,
         }}
       >
         {mobile ? (
@@ -127,6 +128,7 @@ export default function Contact() {
               fontFamily: "Mono",
               letterSpacing: "2px",
               marginBlockEnd: 0,
+              marginBottom: mobile ? null : 30,
             }}
           >
             Contact Now

@@ -19,7 +19,7 @@ export default function Home() {
           backgroundColor: COLORS.layout,
           overflowY: "scroll",
           paddingBottom: "80px",
-          marginTop: mobile ? 0 : 100,
+          paddingTop: mobile ? 0 : 100,
         }}
       >
         {mobile ? (
@@ -68,31 +68,38 @@ export default function Home() {
           <br />
           Our experience makes us stand out from other Software Companies.
         </p>
-        {/* <button style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: COLORS.Primary,
-                    marginTop: "35px",
-                    fontWeight: 'bold',
-                    borderRadius: "10px",
-                    width: "200px",
-                    height: "50px",
-                    border: "none",
-                }}>
-                    <p style={{
-                        color: COLORS.white,
-                        textAlign: 'center',
-                        fontSize: "20px",
-                        fontWeight: 'bold',
-                        fontFamily: "Mono",
-                        letterSpacing: "2px",
-                    }}>CONTACT US</p>
-                </button> */}
+        <button
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: COLORS.Primary,
+            marginTop: "35px",
+            fontWeight: "bold",
+            borderRadius: "10px",
+            width: "200px",
+            height: "50px",
+            border: "none",
+            marginBottom: mobile ? null : 30,
+          }}
+        >
+          <p
+            style={{
+              color: COLORS.white,
+              textAlign: "center",
+              fontSize: "20px",
+              fontWeight: "bold",
+              fontFamily: "Mono",
+              letterSpacing: "2px",
+            }}
+          >
+            CONTACT US
+          </p>
+        </button>
         <img
           src={require("./assets/Background.png")}
           style={{
-            height: mobile ? 500 : 300,
+            height: mobile ? 500 : "70vw",
             width: mobile ? 800 : "100vw",
           }}
         />

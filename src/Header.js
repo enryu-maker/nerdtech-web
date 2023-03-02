@@ -190,6 +190,7 @@ export default function Header({ setComp, Name, setName }) {
               top: 15,
               right: 15,
               zIndex: 999,
+              width: mobileMenuOpen ? null : "100%",
             }}
           >
             {mobileMenuOpen ? (
@@ -200,6 +201,7 @@ export default function Header({ setComp, Name, setName }) {
                     height: 30,
                     // backgroundColor: "black",
                     color: "black",
+                    right: 0,
                   }}
                   onClick={() => openMenu()}
                 >
@@ -213,17 +215,46 @@ export default function Header({ setComp, Name, setName }) {
               <>
                 <div
                   style={{
-                    width: 30,
-                    height: 30,
-                    // backgroundColor: "black",
-                    color: "black",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                   }}
-                  onClick={() => closeMenu()}
                 >
-                  <img
-                    style={{ width: 30, height: 30, cursor: "pointer" }}
-                    src={require("./assets/close.png")}
-                  />
+                  <div></div>
+                  <button
+                    style={{
+                      color: COLORS.black,
+                      ...FONTS.h1,
+                      fontWeight: "bold",
+                      paddingBlockEnd: "0px",
+                      fontFamily: "Mono",
+                      letterSpacing: "2px",
+                      backgroundColor: COLORS.white,
+                      border: "none",
+                      marginLeft: "17%",
+                    }}
+                    onClick={() => {
+                      setComp(React.lazy(() => import("./Home")));
+                      setName("Home");
+                    }}
+                  >
+                    NerdTech
+                  </button>
+                  <div
+                    style={{
+                      width: 30,
+                      height: 30,
+                      // backgroundColor: "black",
+                      color: "black",
+                    }}
+                    onClick={() => closeMenu()}
+                  >
+                    <img
+                      style={{ width: 30, height: 30, cursor: "pointer" }}
+                      src={require("./assets/close.png")}
+                    />
+                  </div>
                 </div>
               </>
             )}
@@ -233,7 +264,7 @@ export default function Header({ setComp, Name, setName }) {
       <div
         style={{
           position: "absolute",
-          top: 0,
+          top: 10,
           left: mobileMenuOpen ? "-100%" : 0,
           zIndex: 299,
           backgroundColor: "#ffff",
@@ -253,24 +284,14 @@ export default function Header({ setComp, Name, setName }) {
             marginTop: 50,
           }}
         >
-          <button
+          <hr
             style={{
-              color: COLORS.black,
-              ...FONTS.h1,
-              fontWeight: "bold",
-              paddingBlockEnd: "0px",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              backgroundColor: COLORS.white,
-              border: "none",
+              width: "85%",
+              color: "#eee",
+              borderWidth: 1.5,
+              borderRadius: 10,
             }}
-            onClick={() => {
-              setComp(React.lazy(() => import("./Home")));
-              setName("Home");
-            }}
-          >
-            NerdTech
-          </button>
+          />
           <>
             <button
               style={{
@@ -280,7 +301,7 @@ export default function Header({ setComp, Name, setName }) {
                 paddingBlockEnd: "0px",
                 fontFamily: "Mono",
                 letterSpacing: "2px",
-                marginRight: "20px",
+
                 backgroundColor: COLORS.white,
                 border: "none",
               }}
@@ -299,7 +320,7 @@ export default function Header({ setComp, Name, setName }) {
                 paddingBlockEnd: "0px",
                 fontFamily: "Mono",
                 letterSpacing: "2px",
-                marginRight: "20px",
+
                 backgroundColor: COLORS.white,
                 border: "none",
               }}

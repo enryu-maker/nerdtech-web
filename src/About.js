@@ -17,6 +17,8 @@ export default function About() {
         backgroundColor: COLORS.layout,
         overflowY: "scroll",
         paddingBottom: mobile ? "80px" : 0,
+        marginTop: mobile ? null : 20,
+        marginBottom: mobile ? null : 10,
       }}
     >
       <Helmet>
