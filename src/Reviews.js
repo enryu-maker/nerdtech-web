@@ -1,12 +1,12 @@
 import React from "react";
 import ReviewCard from "./Component/ReviewCard";
 import Footer from "./Footer";
-import { COLORS, FONTS } from "./Theme/Theme";
+import { COLORS } from "./Theme/Theme";
 import { Helmet } from "react-helmet";
-import Mediaquery from "./Component/MediaQuery";
+// import Mediaquery from "./Component/MediaQuery";
 export default function Reviews() {
-  const tablet = Mediaquery("(max-width:820px)");
-  const mobile = Mediaquery("(min-width:460px)");
+  // const tablet = Mediaquery("(max-width:820px)");
+  // const mobile = Mediaquery("(min-width:460px)");
   return (
     <div
       style={{

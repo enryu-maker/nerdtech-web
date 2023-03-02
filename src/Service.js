@@ -50,7 +50,7 @@ export default function Service() {
     },
   ];
 
-  const tablet = Mediaquery("(max-width:820px)");
+  // const tablet = Mediaquery("(max-width:820px)");
   const mobile = Mediaquery("(min-width:460px)");
   return (
     <div
