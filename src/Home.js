@@ -68,34 +68,6 @@ export default function Home() {
           <br />
           Our experience makes us stand out from other Software Companies.
         </p>
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: COLORS.Primary,
-            marginTop: "35px",
-            fontWeight: "bold",
-            borderRadius: "10px",
-            width: "200px",
-            height: "50px",
-            border: "none",
-            marginBottom: mobile ? null : 30,
-          }}
-        >
-          <p
-            style={{
-              color: COLORS.white,
-              textAlign: "center",
-              fontSize: "20px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-            }}
-          >
-            CONTACT US
-          </p>
-        </button>
         <img
           src={require("./assets/Background.png")}
           style={{

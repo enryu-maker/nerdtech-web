@@ -144,50 +144,6 @@ export default function About() {
           }}
         >
           <img
-            src={require("./assets/akshay.jpg")}
-            style={{
-              height: 150,
-              width: 150,
-              margin: 20,
-              borderRadius: 100,
-            }}
-          />
-          <p
-            style={{
-              color: COLORS.Primary,
-              textAlign: "center",
-              fontSize: "20px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            Akshay
-          </p>
-          <p
-            style={{
-              color: COLORS.black,
-              textAlign: "center",
-              fontSize: "14px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            D.M Manager
-          </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
             src={require("./assets/akif.jpeg")}
             style={{
               height: 150,
@@ -209,7 +165,7 @@ export default function About() {
           >
             Akif
           </p>
-          <p
+          {/* <p
             style={{
               color: COLORS.black,
               textAlign: "center",
@@ -221,7 +177,7 @@ export default function About() {
             }}
           >
             C.E.O
-          </p>
+          </p> */}
         </div>
         <div
           style={{
@@ -253,7 +209,7 @@ export default function About() {
           >
             Ved
           </p>
-          <p
+          {/* <p
             style={{
               color: COLORS.black,
               textAlign: "center",
@@ -265,73 +221,8 @@ export default function About() {
             }}
           >
             C.T.O
-          </p>
+          </p> */}
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src={require("./assets/Sayali.jpg")}
-            style={{
-              height: 150,
-              width: 150,
-              margin: 20,
-              borderRadius: 100,
-            }}
-          />
-          <p
-            style={{
-              color: COLORS.Primary,
-              textAlign: "center",
-              fontSize: "20px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            Sayali
-          </p>
-          <p
-            style={{
-              color: COLORS.black,
-              textAlign: "center",
-              fontSize: "14px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            BackEnd Developer
-          </p>
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-          width: "100%",
-          flexWrap: "wrap",
-        }}
-      ></div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-          width: "100%",
-          flexWrap: "wrap",
-        }}
-      >
         <div
           style={{
             display: "flex",
@@ -362,7 +253,7 @@ export default function About() {
           >
             Abhishek
           </p>
-          <p
+          {/* <p
             style={{
               color: COLORS.black,
               textAlign: "center",
@@ -374,51 +265,7 @@ export default function About() {
             }}
           >
             FrontEnd Developer
-          </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src={require("./assets/Sanyukta.jpg")}
-            style={{
-              height: 150,
-              width: 150,
-              margin: 20,
-              borderRadius: 100,
-            }}
-          />
-          <p
-            style={{
-              color: COLORS.Primary,
-              textAlign: "center",
-              fontSize: "20px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            Sanyukta
-          </p>
-          <p
-            style={{
-              color: COLORS.black,
-              textAlign: "center",
-              fontSize: "14px",
-              fontWeight: "bold",
-              fontFamily: "Mono",
-              letterSpacing: "2px",
-              marginBlock: 0,
-            }}
-          >
-            FrontEnd Developer
-          </p>
+          </p> */}
         </div>
       </div>
       <p
@@ -435,11 +282,11 @@ export default function About() {
       </p>
       <div
         style={{
-          display: mobile ? "flex" : "contents",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: mobile ? "space-evenly" : "center",
-          width: mobile ? "100%" : "50%",
+          // display: mobile ? "flex" : "contents",
+          // flexDirection: "row",
+          // alignItems: "center",
+          // justifyContent: mobile ? "space-evenly" : "center",
+          // // width: mobile ? "100%" : "50%",
           //   flexWrap: mobile ? "wrap" : null,
         }}
       >
@@ -447,15 +294,6 @@ export default function About() {
           <>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8625228787237!2d73.72477151491609!3d19.972283028376985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdded4582aea6f1%3A0x11619722b3c8ffee!2sNerdtech%20%7C%20Web%20Development%20and%20Mobile%20Applications%20Development%20Agency!5e0!3m2!1sen!2sin!4v1677089458014!5m2!1sen!2sin"
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              aria-hidden="false"
-              tabIndex="0"
-            />
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
               width="600"
               height="450"
               style={{ border: 0 }}
@@ -475,35 +313,8 @@ export default function About() {
               aria-hidden="false"
               tabIndex="0"
             />
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
-              width="400"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              aria-hidden="false"
-              tabIndex="0"
-            />
           </>
         )}
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8625228787237!2d73.72477151491609!3d19.972283028376985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdded4582aea6f1%3A0x11619722b3c8ffee!2sNerdtech%20%7C%20Web%20Development%20and%20Mobile%20Applications%20Development%20Agency!5e0!3m2!1sen!2sin!4v1677089458014!5m2!1sen!2sin"
-          width="400"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-        />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0095466952807!2d73.74591351491651!3d20.00811402720998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebfd2ce976af%3A0x8219ab713c3ffc46!2sNerdTech-Digital!5e0!3m2!1sen!2sin!4v1677089784803!5m2!1sen!2sin"
-          width="400"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-        />
       </div>
       <div
         style={{
@@ -519,8 +330,8 @@ export default function About() {
         <img
           src={require("./assets/Contactus.png")}
           style={{
-            height: 400,
-            width: 400,
+            height:!mobile?200 : 400,
+            width:!mobile?200 : 400,
             margin: 20,
           }}
         />
@@ -557,9 +368,11 @@ export default function About() {
               letterSpacing: "2px",
               marginBlock: 0,
               width: mobile ? 500 : 400,
+              textAlign:!mobile?"center":null,
+
             }}
           >
-            Email:
+            Email:&nbsp;
             <a
               href="mailto:contact.nerdtech@gmail.com"
               style={{
@@ -581,9 +394,11 @@ export default function About() {
               letterSpacing: "2px",
               marginBlock: 0,
               width: mobile ? 500 : 400,
+              textAlign:!mobile?"center":null,
+
             }}
           >
-            Phone: +91 9405649047 / +91 9518556670
+            Phone: +91 9405649047
           </p>
         </div>
       </div>
