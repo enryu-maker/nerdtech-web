@@ -25,10 +25,10 @@ export default function Contact() {
       message: Message,
     };
     await fetch(
-      "https://k3z9pg3dyf.execute-api.us-east-1.amazonaws.com/Nerdtech-Contact-Endpoint",
+      "https://formspree.io/f/xbjvrwqp",
       {
         method: "POST",
-        mode: "no-cors",
+        // mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -36,6 +36,7 @@ export default function Contact() {
       }
     )
       .then((data) => {
+        console.log(data);
         setSucess(true);
         setMsg("Thanks, We will contact you soon");
         setLoading(false);
@@ -45,6 +46,8 @@ export default function Contact() {
         setMessage("");
       })
       .catch((err) => {
+        console.log(err);
+
         setSucess(false);
         setMsg("Something went wrong");
         setLoading(false);
